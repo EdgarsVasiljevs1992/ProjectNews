@@ -76,6 +76,7 @@ class NewsCollectionViewController: UICollectionViewController, UISearchBarDeleg
 
         return cell
     }
+   
 
     //MARK: - Navigate to
     
