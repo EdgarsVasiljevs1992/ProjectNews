@@ -12,7 +12,8 @@ class NewsViewController: UIViewController, UISearchBarDelegate, UICollectionVie
     @IBOutlet weak var cView2: UICollectionView!
     @IBOutlet weak var cView3: UICollectionView!
     
-        private let searchVC = UISearchController(searchResultsController: nil)
+    @IBOutlet var kkasVew: UIView!
+    private let searchVC = UISearchController(searchResultsController: nil)
         let titles = Title.createTitle()
         let titles2 = Title.createTitle2()
         let titles3 = Title.createTitle3()
@@ -31,8 +32,15 @@ class NewsViewController: UIViewController, UISearchBarDelegate, UICollectionVie
             // Do any additional setup after loading the view.
             createSearchBar()
         }
-        
-        
+    
+//        override func reloadInputViews() {
+//        createSearchBar()
+//        }
+//    
+        override func viewWillAppear(_ animated: Bool) {
+            kkasVew.reloadInputViews()
+        }
+            
         // MARK: Create Search Bar
         
         func createSearchBar(){
@@ -119,6 +127,12 @@ class NewsViewController: UIViewController, UISearchBarDelegate, UICollectionVie
             guard let vc = storyboard.instantiateViewController(withIdentifier: "NewsFeedViewController") as? NewsFeedViewController else {return}
             let item = titles[indexPath.row]
             vc.searchResult = item.title
+            if (collectionView == cView2){
+            let item2 = titles2[indexPath.row]
+                vc.searchResult = item2.title}
+            if (collectionView == cView3){
+            let item3 = titles3[indexPath.row]
+                vc.searchResult = item3.title}
             
             //present(vc, animated: true, completion: nil)
             navigationController?.pushViewController(vc, animated: true)

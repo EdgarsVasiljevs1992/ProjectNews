@@ -13,6 +13,7 @@
         <!--News Collection View Controller-->
         <scene sceneID="ss8-1H-MF7">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D79-Gi-KfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <collectionViewController storyboardIdentifier="NewsCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yvA-nS-pLs" customClass="NewsCollectionViewController" customModule="ProjectNews" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="20N-Mq-fWC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -77,9 +78,8 @@
                         </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D79-Gi-KfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="-1373"/>
+            <point key="canvasLocation" x="1909" y="-1045"/>
         </scene>
         <!--News Feed View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -510,13 +510,13 @@
         <!--News View Controller-->
         <scene sceneID="wWd-ex-JBb">
             <objects>
-                <viewController id="9iD-dx-rNI" customClass="NewsViewController" customModule="ProjectNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9iD-dx-rNI" customClass="NewsViewController" customModule="ProjectNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Qz-sJ-caa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="Pdz-QZ-EMv">
-                                <rect key="frame" x="20" y="107" width="374" height="682"/>
+                                <rect key="frame" x="20" y="113" width="374" height="682"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uIX-vX-HN7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
@@ -705,8 +705,9 @@
                         <viewLayoutGuide key="safeArea" id="dNe-e6-dcq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Pdz-QZ-EMv" firstAttribute="centerX" secondItem="7Qz-sJ-caa" secondAttribute="centerX" id="TfS-Fe-BMf"/>
-                            <constraint firstItem="Pdz-QZ-EMv" firstAttribute="centerY" secondItem="7Qz-sJ-caa" secondAttribute="centerY" id="bkB-Nt-EYf"/>
+                            <constraint firstItem="Pdz-QZ-EMv" firstAttribute="top" secondItem="dNe-e6-dcq" secondAttribute="top" constant="25" id="OhP-8J-Fe9"/>
+                            <constraint firstItem="dNe-e6-dcq" firstAttribute="trailing" secondItem="Pdz-QZ-EMv" secondAttribute="trailing" constant="20" id="cU9-pt-vwW"/>
+                            <constraint firstItem="Pdz-QZ-EMv" firstAttribute="leading" secondItem="dNe-e6-dcq" secondAttribute="leading" constant="20" id="sHr-K1-R7b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ooP-0A-H23">
@@ -720,6 +721,7 @@
                         <outlet property="cView1" destination="uIX-vX-HN7" id="Eus-YU-Gxt"/>
                         <outlet property="cView2" destination="sx5-TN-htB" id="Y0A-YG-qar"/>
                         <outlet property="cView3" destination="DLN-aI-6Nj" id="fHA-bk-KhT"/>
+                        <outlet property="kkasVew" destination="7Qz-sJ-caa" id="btp-KF-JGm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zh5-Ph-S4Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -729,6 +731,7 @@
         <!--News-->
         <scene sceneID="oOk-ex-mTS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9o-Dn-8Ld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D5Y-4N-g0g" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="plus.rectangle.on.folder.fill" catalog="system" id="SZc-ff-iz4"/>
                     <toolbarItems/>
@@ -741,14 +744,12 @@
                         <segue destination="yvA-nS-pLs" kind="relationship" relationship="rootViewController" id="rwK-uh-53U"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N9o-Dn-8Ld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="961" y="-1373"/>
         </scene>
         <!--News-->
         <scene sceneID="bjc-zW-qga">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fw-qk-pcM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AUf-3D-HeY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="newspaper.fill" catalog="system" id="1Cv-Me-0OB"/>
                     <toolbarItems/>
@@ -761,12 +762,13 @@
                         <segue destination="9iD-dx-rNI" kind="relationship" relationship="rootViewController" id="TLe-IF-GOv"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fw-qk-pcM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928" y="98"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Az-oq-8ai"/>
+        <segue reference="ZUu-Ak-vgu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="720" height="1280"/>
