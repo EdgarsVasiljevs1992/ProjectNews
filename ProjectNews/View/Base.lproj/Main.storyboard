@@ -10,77 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News Collection View Controller-->
-        <scene sceneID="ss8-1H-MF7">
-            <objects>
-                <collectionViewController storyboardIdentifier="NewsCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yvA-nS-pLs" customClass="NewsCollectionViewController" customModule="ProjectNews" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="20N-Mq-fWC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewLayout key="collectionViewLayout" id="veP-uG-an5"/>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="g5Z-mI-ElW" customClass="NewsCollectionViewCell" customModule="ProjectNews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="184" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DSM-WJ-qw9">
-                                    <rect key="frame" x="0.0" y="0.0" width="184" height="177"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pq1-Qb-Q4v">
-                                            <rect key="frame" x="8" y="7" width="168" height="163"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ss2-et-G00">
-                                                    <rect key="frame" x="0.0" y="0.0" width="168" height="120"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="168" id="6bZ-lc-QW2"/>
-                                                        <constraint firstAttribute="height" constant="120" id="wC2-bT-8CO"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xw-Dh-IV0">
-                                                    <rect key="frame" x="0.0" y="128" width="168" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="4eh-AS-BFq"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="U8D-so-UhN"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Pq1-Qb-Q4v" firstAttribute="leading" secondItem="DSM-WJ-qw9" secondAttribute="leading" constant="8" id="Fi7-7u-EVX"/>
-                                        <constraint firstAttribute="bottom" secondItem="Pq1-Qb-Q4v" secondAttribute="bottom" constant="7" id="KWc-WC-flH"/>
-                                        <constraint firstAttribute="trailing" secondItem="Pq1-Qb-Q4v" secondAttribute="trailing" constant="8" id="pdo-3o-n9e"/>
-                                        <constraint firstItem="Pq1-Qb-Q4v" firstAttribute="top" secondItem="DSM-WJ-qw9" secondAttribute="top" constant="7" id="qqD-sq-KWN"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="184" height="177"/>
-                                <connections>
-                                    <outlet property="newsCollectionImage" destination="ss2-et-G00" id="wA9-qx-dZJ"/>
-                                    <outlet property="newsCollectionLabel" destination="7Xw-Dh-IV0" id="kaQ-cL-o4Y"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="yvA-nS-pLs" id="u9N-Am-ht2"/>
-                            <outlet property="delegate" destination="yvA-nS-pLs" id="lwf-Pv-5xO"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="3Pj-ZE-W0N">
-                        <barButtonItem key="leftBarButtonItem" image="moon.circle.fill" catalog="system" id="Qbp-MK-ug9">
-                            <connections>
-                                <segue destination="Svq-Eb-MFz" kind="presentation" id="6Az-oq-8ai"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D79-Gi-KfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1909" y="-1045"/>
-        </scene>
         <!--News Feed View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -403,10 +332,11 @@
                                     <constraint firstAttribute="height" constant="60" id="3hz-xc-bFt"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="7bD-KA-mI7"/>
                                 </constraints>
+                                <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="X">
                                     <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
-                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -433,6 +363,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bec-gR-BCZ">
                                         <rect key="frame" x="0.0" y="125" width="200" height="60"/>
                                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <color key="tintColor" name="AccentColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Open Settings">
                                             <fontDescription key="titleFontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="18"/>
@@ -507,7 +438,7 @@
             </objects>
             <point key="canvasLocation" x="125" y="426"/>
         </scene>
-        <!--News View Controller-->
+        <!--News-->
         <scene sceneID="wWd-ex-JBb">
             <objects>
                 <viewController storyboardIdentifier="NewsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9iD-dx-rNI" customClass="NewsViewController" customModule="ProjectNews" customModuleProvider="target" sceneMemberID="viewController">
@@ -518,7 +449,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Pdz-QZ-EMv">
                                 <rect key="frame" x="20" y="108" width="374" height="650"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uIX-vX-HN7">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uIX-vX-HN7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -581,7 +512,7 @@
                                             <outlet property="delegate" destination="9iD-dx-rNI" id="Saa-QL-q9D"/>
                                         </connections>
                                     </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sx5-TN-htB">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sx5-TN-htB">
                                         <rect key="frame" x="0.0" y="225" width="374" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="14X-bn-BGz">
@@ -710,7 +641,7 @@
                             <constraint firstItem="Pdz-QZ-EMv" firstAttribute="leading" secondItem="dNe-e6-dcq" secondAttribute="leading" constant="20" id="sHr-K1-R7b"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ooP-0A-H23">
+                    <navigationItem key="navigationItem" title="News" id="ooP-0A-H23">
                         <barButtonItem key="leftBarButtonItem" image="moon.circle.fill" catalog="system" id="VF1-k1-ZJX">
                             <connections>
                                 <segue destination="Svq-Eb-MFz" kind="presentation" id="ZUu-Ak-vgu"/>
@@ -727,25 +658,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zh5-Ph-S4Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1659" y="98"/>
-        </scene>
-        <!--News-->
-        <scene sceneID="oOk-ex-mTS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D5Y-4N-g0g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" image="plus.rectangle.on.folder.fill" catalog="system" id="SZc-ff-iz4"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GI1-lw-IHn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="yvA-nS-pLs" kind="relationship" relationship="rootViewController" id="rwK-uh-53U"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N9o-Dn-8Ld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="983" y="-1045"/>
         </scene>
         <!--News-->
         <scene sceneID="bjc-zW-qga">
@@ -775,7 +687,6 @@
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="moon.circle.fill" catalog="system" width="128" height="121"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
-        <image name="plus.rectangle.on.folder.fill" catalog="system" width="128" height="96"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -794,9 +705,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

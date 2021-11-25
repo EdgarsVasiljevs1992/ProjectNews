@@ -107,6 +107,12 @@ class SavedTableViewController: UITableViewController {
 
     //MARK: - Number of rows in section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if savedItems.count == 0 {
+        tableView.setEmptyView(title: "You don't have any saved articles.", message: "Your saved articles will be in here.")
+        }
+        else {
+        tableView.restore()
+        }
         return savedItems.count
     }
 

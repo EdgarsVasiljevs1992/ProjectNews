@@ -7,7 +7,9 @@
 
 import UIKit
 
+
 class NewsViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     @IBOutlet weak var cView1: UICollectionView!
     @IBOutlet weak var cView2: UICollectionView!
     @IBOutlet weak var cView3: UICollectionView!
@@ -22,7 +24,6 @@ class NewsViewController: UIViewController, UISearchBarDelegate, UICollectionVie
         
         override func viewDidLoad() {
             super.viewDidLoad()
-
             // Uncomment the following line to preserve selection between presentations
             // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,6 +41,8 @@ class NewsViewController: UIViewController, UISearchBarDelegate, UICollectionVie
 //    override func viewWillDisappear(_ animated: Bool) {
 //        <#code#>
 //    }
+    
+    
     
         override func viewWillAppear(_ animated: Bool) {
             collView.reloadInputViews()
