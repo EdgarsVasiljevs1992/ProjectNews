@@ -12,7 +12,7 @@ class NewsViewController: UIViewController, UISearchBarDelegate, UICollectionVie
     @IBOutlet weak var cView2: UICollectionView!
     @IBOutlet weak var cView3: UICollectionView!
     
-    @IBOutlet var kkasVew: UIView!
+    @IBOutlet var collView: UIView!
     private let searchVC = UISearchController(searchResultsController: nil)
         let titles = Title.createTitle()
         let titles2 = Title.createTitle2()
@@ -36,9 +36,14 @@ class NewsViewController: UIViewController, UISearchBarDelegate, UICollectionVie
 //        override func reloadInputViews() {
 //        createSearchBar()
 //        }
-//    
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        <#code#>
+//    }
+    
         override func viewWillAppear(_ animated: Bool) {
-            kkasVew.reloadInputViews()
+            collView.reloadInputViews()
+            
         }
             
         // MARK: Create Search Bar
