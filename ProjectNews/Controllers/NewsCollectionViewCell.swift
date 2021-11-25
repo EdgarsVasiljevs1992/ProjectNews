@@ -11,8 +11,4 @@ class NewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var newsCollectionImage: UIImageView!
     @IBOutlet weak var newsCollectionLabel: UILabel!
     
-    
-//    func configure(with countryName: String){
-//        newsCollectionLabel.text = countryName
-//    }
 }

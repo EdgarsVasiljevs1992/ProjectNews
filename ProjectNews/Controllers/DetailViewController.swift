@@ -35,15 +35,10 @@ class DetailViewController: UIViewController {
         newsImageView.sd_setImage(with: URL(string: newsImage), placeholderImage: UIImage(named: "news.png"))
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         context = appDelegate.persistentContainer.viewContext
-        //appdelegate presistancecontainer as context
-//#warning("app delegate")
-        
         }
-        
-   
+ 
+    //MARK: Save Data
     
-    
-    //#warning("homework")
     func saveData(){
         do{
             try context?.save()
@@ -52,9 +47,8 @@ class DetailViewController: UIViewController {
             fatalError("error in saving core data item")
         }
     }
-    //saveData()
-    //basicAlert(saved!, please go to saved tab bar to see your saved data
-    
+  
+    //MARK: Action save button
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         let item = Items(context: context!)
@@ -67,33 +61,12 @@ class DetailViewController: UIViewController {
         savedItems.append(item)
         saveData()
     }
-//        item.
-//        put inside var
-//        var webUrlString = String()
-//        var titleString = String()
-//        var contentString = String()titleString
-//        var newsImage = String()
-        
-        //savedItems.append(NewItem)
-        //saveData() func needed
-    
-  
-    
-    
-    
-    
 
-    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         guard let destinationVC: WebViewController = segue.destination as? WebViewController else{return print("destinationVC as WebViewController did not load")}
-        
                 destinationVC.urlString = webUrlString
-        // Pass the selected object to the new view controller.
     }
-    
-
 }

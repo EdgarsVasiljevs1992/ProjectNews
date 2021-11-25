@@ -300,7 +300,6 @@
                     <navigationItem key="navigationItem" title="Saved Articles" id="Nfe-la-Fic">
                         <barButtonItem key="leftBarButtonItem" image="moon.circle.fill" catalog="system" id="vmh-NK-5qs">
                             <connections>
-                                <action selector="someInfo:" destination="Nzd-d6-o4j" id="K1w-Pv-yZJ"/>
                                 <segue destination="Svq-Eb-MFz" kind="presentation" id="Y0Y-Vs-mLY"/>
                             </connections>
                         </barButtonItem>

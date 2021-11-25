@@ -25,7 +25,6 @@ class WebViewController: UIViewController,
         
     }
     
-
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("didFinish navigation")
     }

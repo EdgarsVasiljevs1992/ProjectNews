@@ -12,7 +12,7 @@ class NewsFeedViewController: UIViewController {
     
     var newsItems: [NewsItem] = []
     var searchResult = String()
-    //#warning("put your newsapi.org apikey here:")
+    
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -22,19 +22,10 @@ class NewsFeedViewController: UIViewController {
         super.viewDidLoad()
         self.title = "\(searchResult) News"
         handleGetData()
-//        self.tblView.delegate
-//        self.tblView.dataSource
     }
-//    @IBAction func fetchData(_ sender: Any) {
-//        tblView.reloadData()
-//        basicAlert(title: "Plane!", message: "Tabble view data reloaded.")
-//    }
-//    @IBAction func infoAlert(_ sender: Any) {
-//        basicAlert(title: "Some info!", message: "Search keyword: \(searchResult).")
-//    }
     
+    // MARK: Activity indicator
     
-
     func activityIndicator(animated: Bool){
         DispatchQueue.main.async {
             if animated{
@@ -45,8 +36,9 @@ class NewsFeedViewController: UIViewController {
                 self.activityIndicatorView.startAnimating()
             }
         }
-        
     }
+    
+    //MARK: Handle Get Data
     
     func handleGetData(){
         activityIndicator(animated: true)
@@ -84,10 +76,10 @@ class NewsFeedViewController: UIViewController {
                 print("err:", error)
             }
         }.resume()
-//      #warning("complete URLSession(configuration: to print(jsonData of Articles)")
-        //}.resume()
     }
 }
+
+    //MARK: Extension viewDataDelegate
 
 extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -120,8 +112,6 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource{
         
         //present(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)
-        
-        
     }
     
 }
