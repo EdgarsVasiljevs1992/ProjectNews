@@ -92,9 +92,9 @@
 			children = (
 				684A329C2747E6AA00D29928 /* Extention */,
 				684A329D2747E6B300D29928 /* Model */,
-				684A32992747E66100D29928 /* AppDelegate */,
-				684A329A2747E69500D29928 /* Controllers */,
 				684A329B2747E6A300D29928 /* View */,
+				684A329A2747E69500D29928 /* Controllers */,
+				684A32992747E66100D29928 /* AppDelegate */,
 				684A328E2747E65900D29928 /* Assets.xcassets */,
 				684A32932747E65900D29928 /* Info.plist */,
 				8CD90E7E274BC13600A26088 /* ProjectNews.xcdatamodeld */,
