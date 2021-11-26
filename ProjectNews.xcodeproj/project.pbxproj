@@ -29,7 +29,6 @@
 		8CE349382748FC3200CE331C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE349372748FC3200CE331C /* WebViewController.swift */; };
 		8CE3493A2749005400CE331C /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE349392749005400CE331C /* SavedTableViewController.swift */; };
 		8CF95FB5274BD96500815B0D /* ChooseTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF95FB4274BD96500815B0D /* ChooseTitle.swift */; };
-		8CF95FB7274BE09400815B0D /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF95FB6274BE09400815B0D /* NewsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +55,6 @@
 		8CE349372748FC3200CE331C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8CE349392749005400CE331C /* SavedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
 		8CF95FB4274BD96500815B0D /* ChooseTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTitle.swift; sourceTree = "<group>"; };
-		8CF95FB6274BE09400815B0D /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				8C52FBDC274EB88500B48897 /* NewsViewController.swift */,
-				8CF95FB6274BE09400815B0D /* NewsCollectionViewCell.swift */,
 				8C52FBE2274EC9F000B48897 /* News1CollectionViewCell.swift */,
 				8C52FBDE274EC9C600B48897 /* News2CollectionViewCell.swift */,
 				8C52FBE0274EC9D200B48897 /* News3CollectionViewCell.swift */,
@@ -238,7 +235,6 @@
 				8C52FBDF274EC9C600B48897 /* News2CollectionViewCell.swift in Sources */,
 				8C726A24274D18270025651A /* AppearenceViewController.swift in Sources */,
 				8C52FBE1274EC9D200B48897 /* News3CollectionViewCell.swift in Sources */,
-				8CF95FB7274BE09400815B0D /* NewsCollectionViewCell.swift in Sources */,
 				8C867409274BD24E002DFAA0 /* DataManager.swift in Sources */,
 				684A32872747E65600D29928 /* NewsFeedViewController.swift in Sources */,
 				8CE349382748FC3200CE331C /* WebViewController.swift in Sources */,
